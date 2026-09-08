@@ -3,82 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#090a12" />
+  <meta name="theme-color" content="#eef6ff" />
   <meta name="description" content="RollScreen - iPhone、iPad、Android、別PCのブラウザをWindowsの拡張ディスプレイとして使えるWindowsアプリ。" />
   <title>RollScreen - irodoli</title>
   <link rel="stylesheet" href="../assets/site.css" />
+  <style>
+    body.rs-page{color:#1c2944;background:linear-gradient(180deg,#f8fbff 0,#eef5ff 36%,#f7f5ff 72%,#fff 100%)}
+    .rs-page .site-header{background:rgba(250,252,255,.86);border-bottom:1px solid rgba(44,65,105,.1);box-shadow:0 8px 30px rgba(50,70,110,.06)}
+    .rs-page .brand,.rs-page .nav a{color:#334766}.rs-page .nav a:hover,.rs-page .nav a[aria-current="page"]{color:#17233d;background:rgba(83,102,238,.08)}
+    .rs-page .hero{padding:72px 0 68px}.rs-page .hero h1{color:#182744;font-size:clamp(3.4rem,7vw,6.6rem)}
+    .rs-page .hero-catch{color:#3d4e70}.rs-page .lead{color:#53637d}.rs-page .eyebrow{color:#665ce8}
+    .rs-page .card{background:rgba(255,255,255,.88);border-color:rgba(70,91,135,.13);box-shadow:0 18px 55px rgba(72,88,130,.11)}
+    .rs-page .card h3,.rs-page h2{color:#1c2a48}.rs-page .card p,.rs-page .section-head p,.rs-page .muted{color:#66748b}
+    .rs-page .section{border-top:1px solid rgba(69,87,129,.09)}
+    .rs-page .section:nth-of-type(even){background:rgba(255,255,255,.48)}
+    .rs-page .badge{background:#fff;color:#65738b;border-color:#d9e2f0}.rs-page .badge.accent{background:#eceaff;color:#5e52d8;border-color:#cfc9ff}
+    .rs-page .feature-icon{background:linear-gradient(145deg,#ecf7ff,#f1ebff);border-color:#d8ddff;color:#5d60d8}
+    .rs-visual{margin:0;border-radius:28px;overflow:hidden;box-shadow:0 28px 70px rgba(63,77,120,.16);border:1px solid rgba(68,88,132,.12);background:#fff}
+    .rs-visual img{width:100%;height:auto}.rs-caption{margin:10px 4px 0;color:#7a879d;font-size:.84rem}
+    .rs-hero-grid{grid-template-columns:.88fr 1.12fr;gap:42px}.rs-screen-grid{grid-template-columns:1.12fr .88fr;gap:38px;align-items:center}
+    .rs-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}.rs-flow .card{position:relative;padding-top:58px}.rs-flow-num{position:absolute;top:20px;left:22px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#665ce8;color:#fff;font-weight:800}
+    .rs-highlight{background:linear-gradient(135deg,#eef8ff,#f3efff 56%,#fff4fb);border:1px solid #dce5f2;border-radius:30px;padding:30px}
+    .rs-page .callout{background:linear-gradient(135deg,#e9f5ff,#f0ebff);border-color:#d6ddff}
+    .rs-status{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:#4c607e;font-size:.9rem}.rs-status::before{content:"";width:9px;height:9px;border-radius:50%;background:#5fcf9f;box-shadow:0 0 14px rgba(95,207,159,.55)}
+    @media(max-width:900px){.rs-hero-grid,.rs-screen-grid{grid-template-columns:1fr}.rs-hero-grid .product-hero-copy{order:1}.rs-hero-grid .rs-visual{order:2}.rs-flow{grid-template-columns:1fr}}
+  </style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span><span>irodoli</span></a>
-      <nav class="nav" aria-label="RollScreenナビゲーション"><a href="./" aria-current="page">RollScreen</a><a class="keep-mobile" href="https://dl.irodoli.com/">Download</a></nav>
-    </div>
-  </header>
+<body class="rs-page">
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span><span>irodoli</span></a><nav class="nav" aria-label="RollScreenナビゲーション"><a href="./" aria-current="page">RollScreen</a><a class="keep-mobile" href="#how">使い方</a><a class="keep-mobile" href="https://dl.irodoli.com/">Download</a></nav></div></header>
+
   <main>
     <section class="hero product-hero">
-      <div class="wrap hero-grid">
+      <div class="wrap hero-grid rs-hero-grid">
         <div class="product-hero-copy">
           <span class="eyebrow">Windows extended display</span>
           <h1>RollScreen</h1>
           <p class="hero-catch">もう1台の画面を、手元の端末で。</p>
-          <p class="lead">iPhone・iPad・Android・別PCのブラウザを、Windowsの拡張ディスプレイとして使えます。WindowsでRollScreenを起動し、表示されたQRコードやURLを開くだけ。端末側への専用アプリのインストールは不要です。</p>
-          <div class="actions"><a class="button primary" href="https://dl.irodoli.com/">Beta版をダウンロード</a><a class="button secondary" href="#how">使い方を見る</a></div>
-          <div class="badges"><span class="badge accent"><span class="status-dot"></span>Beta 0.8.2</span><span class="badge">Windows 11</span><span class="badge">Browser viewer</span></div>
+          <p class="lead">iPhone・iPad・Android・別PCのブラウザを、Windowsの拡張ディスプレイとして使えます。Windowsで起動し、QRコードやURLを開くだけ。端末側への専用アプリは不要です。</p>
+          <div class="actions"><a class="button primary" href="https://dl.irodoli.com/">Beta 0.8.2 をダウンロード</a><a class="button secondary" href="#screen">画面を見る</a></div>
+          <div class="badges"><span class="badge accent"><span class="status-dot"></span>Beta 0.8.2</span><span class="badge">Windows 11</span><span class="badge">iPhone / iPad / Android / PC</span></div>
+          <div class="rs-status">0.8.2 Setup / Host / HIDMaestro動作確認済み</div>
         </div>
-        <div class="card" style="padding:28px">
-          <span class="eyebrow">PC → Browser</span>
-          <h2 style="margin-top:14px;font-size:clamp(1.8rem,3.4vw,2.8rem)">Windowsの拡張画面を、そのまま手元へ。</h2>
-          <p style="margin-top:16px">単なるミラーリングではなく、Windowsに仮想ディスプレイを追加します。資料、チャット、監視画面、ゲーム補助など、いつものマルチモニターと同じ感覚でウィンドウを移動できます。</p>
-          <div class="badges"><span class="badge">iPhone / iPad</span><span class="badge">Android</span><span class="badge">Edge / Chrome</span><span class="badge">LAN / Tailscale</span></div>
-        </div>
+        <figure class="rs-visual"><img src="hero-devices.svg" alt="Windowsの拡張画面をiPad、スマートフォン、別PCへ表示するRollScreenの利用イメージ" /><figcaption class="rs-caption">PCのもう1枚の画面を、ブラウザが使える端末へ。</figcaption></figure>
       </div>
     </section>
 
-    <section class="section" id="uses">
-      <div class="wrap">
-        <div class="section-head"><span class="eyebrow">What you can do</span><h2 style="margin-top:13px">余っている画面を、すぐサブディスプレイに。</h2><p>ブラウザが使える端末なら、専用ViewerアプリなしでRollScreenへ接続できます。</p></div>
-        <div class="grid cols-3">
-          <article class="card"><div class="feature-icon">▣</div><h3>Windowsの拡張画面</h3><p>仮想ディスプレイとして追加されるため、ウィンドウを別画面へ移動して使えます。</p></article>
-          <article class="card"><div class="feature-icon">QR</div><h3>ブラウザだけで接続</h3><p>同じLAN・Wi-FiならQRコードまたはURLから接続。端末側への専用アプリ導入は不要です。</p></article>
-          <article class="card"><div class="feature-icon">AV</div><h3>映像とPC音声</h3><p>低遅延の映像転送とWindows音声に対応。AVシンクと出力機器の追加遅延補正も行えます。</p></article>
-          <article class="card"><div class="feature-icon">↔</div><h3>別端末から操作</h3><p>別PC・スマートフォン・タブレットから、マウス・タッチ・文字入力をWindowsへ送れます。</p></article>
-          <article class="card"><div class="feature-icon">GP</div><h3>画面上ゲームパッド</h3><p>スティック、十字キー、ABXY、トリガーを画面上に表示。WindowsではXbox互換コントローラーとして利用できます。</p></article>
-          <article class="card"><div class="feature-icon">90°</div><h3>縦横・回転に追従</h3><p>端末の向きとRollScreenの表示回転に合わせて、ゲームパッドなどの操作UIも追従します。</p></article>
+    <section class="section" id="screen">
+      <div class="wrap hero-grid rs-screen-grid">
+        <figure class="rs-visual"><img src="app-window.svg" alt="RollScreen 0.8.2のWindowsアプリ画面構成。接続、画質、音声、入力許可、QRコードが表示されている" /><figcaption class="rs-caption">RollScreen 0.8.2の実画面構成を公開用に再現。QRコードとURLはダミーです。</figcaption></figure>
+        <div class="section-head" style="margin:0">
+          <span class="eyebrow">Open and connect</span>
+          <h2 style="margin-top:13px">QRを開けば、そこがもう1枚の画面。</h2>
+          <p>Windows側では接続状態、画質、PC音声、入力許可をまとめて管理。Viewer側はブラウザだけで接続できます。</p>
+          <div class="badges"><span class="badge">QR / URL</span><span class="badge">720p60 低遅延</span><span class="badge">PC Audio</span><span class="badge">Remote Input</span></div>
         </div>
       </div>
     </section>
 
     <section class="section" id="how">
-      <div class="wrap hero-grid">
-        <div class="section-head" style="margin:0"><span class="eyebrow">Quick start</span><h2 style="margin-top:13px">起動して、QRを開くだけ。</h2><p>基本の接続は3ステップです。外出先ではTailscale経由の接続を推奨しています。</p></div>
-        <ol class="step-list">
-          <li><strong>WindowsでRollScreenを起動</strong><br />仮想ディスプレイが追加され、接続用QRコードとURLが表示されます。</li>
-          <li><strong>端末のブラウザで開く</strong><br />iPhone / iPadはSafari、Androidや別PCはChrome / Edge系ブラウザから接続します。</li>
-          <li><strong>Windowsのウィンドウを移動</strong><br />追加されたRollScreen画面へウィンドウを移動して使います。</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow">Remote play</span><h2 style="margin-top:13px">見るだけでなく、手元から操作。</h2><p>入力を許可した場合、別端末からWindowsへ操作を送れます。同じPC内のViewerではマウス・文字入力を無効にし、入力競合を避けています。</p></div>
-        <div class="grid cols-2">
-          <article class="card"><h3>マウス・タッチ・文字入力</h3><p>別PC、スマートフォン、タブレットを入力端末として利用できます。文字入力はViewerの入力バーからWindowsへ送信します。</p></article>
-          <article class="card"><h3>ゲームパッド・連射・マクロ</h3><p>Xbox / Switch風のABXY配置、左右スティック、D-pad、LB/RB、LT/RT、L3/R3に対応。ボタン位置・大きさ・透明度の調整、連射、デジタルボタンマクロも利用できます。</p></article>
+        <div class="section-head"><span class="eyebrow">Quick start</span><h2 style="margin-top:13px">3ステップで使い始める。</h2><p>単なるミラーリングではなく、Windowsに仮想ディスプレイを追加します。</p></div>
+        <div class="rs-flow">
+          <article class="card"><span class="rs-flow-num">1</span><h3>RollScreenを起動</h3><p>Windowsに拡張画面を追加し、接続用QRコードとURLを表示します。</p></article>
+          <article class="card"><span class="rs-flow-num">2</span><h3>ブラウザで開く</h3><p>iPhone / iPadはSafari、Androidや別PCはChrome / Edge系ブラウザから接続します。</p></article>
+          <article class="card"><span class="rs-flow-num">3</span><h3>ウィンドウを移動</h3><p>追加されたRollScreen画面へ、資料やチャット、ツールなどをそのまま移動して使います。</p></article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap callout product-final-cta">
-        <span class="eyebrow">Beta 0.8.2</span>
-        <h2 style="margin-top:12px">RollScreenを試す。</h2>
-        <p class="muted">現在はBeta / 確認版です。HIDMaestroを使用するゲームパッド機能を含み、開発用ドライバ証明書の確認が表示されます。Formal Stable版ではありません。</p>
-        <div class="actions"><a class="button primary" href="https://dl.irodoli.com/">ダウンロード</a><a class="button secondary" href="../">irodoli製品一覧</a></div>
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">What you can do</span><h2 style="margin-top:13px">サブ画面だけで終わらない。</h2><p>映像、PC音声、リモート入力、ゲームパッドまで、ブラウザViewerの上でつなげています。</p></div>
+        <div class="grid cols-3">
+          <article class="card"><div class="feature-icon">▣</div><h3>Windowsの拡張画面</h3><p>仮想ディスプレイとして追加。普段のマルチモニターと同じようにウィンドウを移動できます。</p></article>
+          <article class="card"><div class="feature-icon">QR</div><h3>ブラウザだけで接続</h3><p>同じLAN / Wi-FiならQRまたはURLから接続。端末側への専用Viewerアプリは不要です。</p></article>
+          <article class="card"><div class="feature-icon">AV</div><h3>映像とPC音声</h3><p>低遅延映像とWindows音声に対応。AVシンクとBluetooth等の追加遅延補正も行えます。</p></article>
+          <article class="card"><div class="feature-icon">↔</div><h3>別端末から操作</h3><p>別PC、スマートフォン、タブレットからマウス・タッチ・文字入力をWindowsへ送れます。</p></article>
+          <article class="card"><div class="feature-icon">90°</div><h3>縦横・回転に追従</h3><p>端末の向きとRollScreenの90°回転に合わせて、ゲームパッドなどのUIも追従します。</p></article>
+          <article class="card"><div class="feature-icon">↗</div><h3>外出先にも</h3><p>Tailscale接続を推奨。Direct Internetは上級者向けとして分離しています。</p></article>
+        </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="wrap hero-grid rs-screen-grid">
+        <div class="section-head" style="margin:0">
+          <span class="eyebrow">Gamepad overlay</span>
+          <h2 style="margin-top:13px">タブレットを、画面付きゲームパッドに。</h2>
+          <p>左右スティック、D-pad、ABXY、LB/RB、LT/RT、L3/R3をViewer上に表示。Xbox / Switch風の配置を選べ、ボタン位置・大きさ・透明度も調整できます。</p>
+          <div class="badges"><span class="badge">Xbox compatible</span><span class="badge">Turbo 1–30/s</span><span class="badge">4 Macros</span><span class="badge">Auto Rotation</span></div>
+        </div>
+        <figure class="rs-visual"><img src="gamepad-visual.svg" alt="RollScreen Viewer上に表示された仮想ゲームパッドのイメージ" /><figcaption class="rs-caption">ブラウザ上の操作UI。Windows側ではXbox互換コントローラーとして扱います。</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap rs-highlight">
+        <span class="eyebrow">About remote input</span>
+        <h2 style="margin-top:13px">同PCでは見る・ゲームパッド確認。操作は別端末から。</h2>
+        <p class="muted">同じPC内ではWindowsのカーソル・フォーカス・IMEがViewerと競合するため、0.8.2では同PCマウス・文字入力を無効化しています。別PC / iPhone / iPad / Androidを正式なリモート入力経路として扱います。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap callout product-final-cta"><span class="eyebrow">Beta 0.8.2</span><h2 style="margin-top:12px">余っている端末を、Windowsの新しい画面へ。</h2><p class="muted">現在はBeta / 確認版です。HIDMaestroを使用するゲームパッド機能を含み、開発用ドライバ証明書の確認が表示されます。Formal Stable版ではありません。</p><div class="actions"><a class="button primary" href="https://dl.irodoli.com/">Beta版をダウンロード</a><a class="button secondary" href="../">irodoli製品一覧</a></div></div>
+    </section>
   </main>
+
   <footer class="footer"><div class="wrap footer-inner"><span>RollScreen by irodoli</span><span>Beta 0.8.2</span></div></footer>
 </body>
 </html>
