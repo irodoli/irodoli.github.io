@@ -43,9 +43,9 @@
           <h1>RollScreen</h1>
           <p class="hero-catch">もう1台の画面を、手元の端末で。</p>
           <p class="lead">iPhone・iPad・Android・別PCのブラウザを、Windowsの拡張ディスプレイとして使えます。Windowsで起動し、QRコードやURLを開くだけ。端末側への専用アプリは不要です。</p>
-          <div class="actions"><a class="button primary" href="https://dl.irodoli.com/">Beta 0.8.5 をダウンロード</a><a class="button secondary" href="#screen">画面を見る</a></div>
-          <div class="badges"><span class="badge accent"><span class="status-dot"></span>Beta 0.8.5</span><span class="badge">Windows 11</span><span class="badge">iPhone / iPad / Android / PC</span></div>
-          <div class="rs-status">0.8.5 Setup / Host / HIDMaestro動作確認済み</div>
+          <div class="actions"><a class="button primary" href="https://dl.irodoli.com/">Beta 0.8.6 をダウンロード</a><a class="button secondary" href="#screen">画面を見る</a></div>
+          <div class="badges"><span class="badge accent"><span class="status-dot"></span>Beta 0.8.6</span><span class="badge">Windows 11</span><span class="badge">iPhone / iPad / Android / PC</span></div>
+          <div class="rs-status">0.8.6 Setup / Host / HIDMaestro動作確認済み</div>
         </div>
         <figure class="rs-visual"><img src="hero-devices.svg" alt="Windowsの拡張画面をiPad、スマートフォン、別PCへ表示するRollScreenの利用イメージ" /><figcaption class="rs-caption">PCのもう1枚の画面を、ブラウザが使える端末へ。</figcaption></figure>
       </div>
@@ -53,7 +53,7 @@
 
     <section class="section" id="screen">
       <div class="wrap hero-grid rs-screen-grid">
-        <figure class="rs-visual"><img src="app-window.svg" alt="RollScreen 0.8.5のWindowsアプリ画面構成。接続、画質、音声、入力許可、QRコードが表示されている" /><figcaption class="rs-caption">RollScreen 0.8.5の実画面構成を公開用に再現。QRコードとURLはダミーです。</figcaption></figure>
+        <figure class="rs-visual"><img src="app-window.svg" alt="RollScreen 0.8.6のWindowsアプリ画面構成。接続、画質、音声、入力許可、QRコードが表示されている" /><figcaption class="rs-caption">RollScreen 0.8.6の実画面構成を公開用に再現。QRコードとURLはダミーです。</figcaption></figure>
         <div class="section-head" style="margin:0">
           <span class="eyebrow">Open and connect</span>
           <h2 style="margin-top:13px">QRを開けば、そこがもう1枚の画面。</h2>
@@ -91,28 +91,28 @@
     <section class="section">
       <div class="wrap hero-grid rs-screen-grid">
         <div class="section-head" style="margin:0">
-          <span class="eyebrow">Gamepad</span>
-          <h2 style="margin-top:13px">画面パッドでも、手元の物理パッドでも。</h2>
-          <p>Viewer上の左右スティック、D-pad、ABXY、LB/RB、LT/RT、L3/R3に加えて、iPhone・iPad・別PCにUSBまたはBluetoothで接続した物理ゲームパッドもBrowser Gamepad API経由で利用できます。対応ブラウザ・コントローラーでは接続を自動検出し、Windows側ではXbox互換コントローラーとして扱います。0.8.5ではゲームパッド入力をマウス・文字入力から分離し、パッドを使うだけではWindowsのマウスカーソルを動かしません。</p>
-          <div class="badges"><span class="badge">USB / Bluetooth</span><span class="badge">Xbox compatible</span><span class="badge">Turbo 1–30/s</span><span class="badge">4 Macros</span><span class="badge">Auto Rotation</span></div>
+          <span class="eyebrow">Gamepad + Touchpad</span>
+          <h2 style="margin-top:13px">ゲーム中だけ、必要な時だけカーソル操作。</h2>
+          <p>画面パッドに加え、iPhone・iPad・別PCにUSBまたはBluetoothで接続した物理ゲームパッドもBrowser Gamepad API経由で利用できます。0.8.6では通常操作とゲーム操作を明確に分離。ゲーム中は画面全体のマウス入力を無効にし、必要な時だけ小型Touchpadを表示してカーソル移動・左クリック・2本指スクロール・右クリックを使えます。</p>
+          <div class="badges"><span class="badge">USB / Bluetooth</span><span class="badge">Touchpad</span><span class="badge">Xbox compatible</span><span class="badge">Turbo 1–30/s</span><span class="badge">4 Macros</span><span class="badge">Auto Rotation</span></div>
         </div>
-        <figure class="rs-visual"><img src="gamepad-visual.svg" alt="RollScreen Viewer上に表示された仮想ゲームパッドのイメージ" /><figcaption class="rs-caption">画面パッドと物理ゲームパッドを同じRollScreen入力経路へ統合します。</figcaption></figure>
+        <figure class="rs-visual"><img src="gamepad-visual.svg" alt="RollScreen Viewer上に表示された仮想ゲームパッドのイメージ" /><figcaption class="rs-caption">画面パッド・物理ゲームパッド・必要時だけ出せる小型Touchpadを、同じRollScreen入力経路へ統合します。</figcaption></figure>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap rs-highlight">
         <span class="eyebrow">About remote input</span>
-        <h2 style="margin-top:13px">同PCでは見る・ゲームパッド確認。操作は別端末から。</h2>
-        <p class="muted">同じPC内ではWindowsのカーソル・フォーカス・IMEがViewerと競合するため、0.8.5では同PCマウス・文字入力を無効化しています。別PC / iPhone / iPad / Androidを正式なリモート入力経路として扱います。物理ゲームパッドの認識可否はブラウザとOS、コントローラーの組み合わせに依存します。</p>
+        <h2 style="margin-top:13px">通常操作とゲーム操作を、誤操作しにくく分離。</h2>
+        <p class="muted">別PC / iPhone / iPad / Androidでは、通常操作モードは画面全体をマウス・タッチ・文字入力に使用。ゲーム操作モードでは通常ポインタを止め、必要な時だけ小型Touchpadを使えます。同じPC内ではWindowsのカーソル・フォーカス・IMEが競合するため、0.8.6でも同PCマウス・文字入力・小型Touchpadは無効化し、モニター／ゲームパッド確認用として扱います。</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="wrap callout product-final-cta"><span class="eyebrow">Beta 0.8.5</span><h2 style="margin-top:12px">余っている端末を、Windowsの新しい画面へ。</h2><p class="muted">現在はBeta / 確認版です。HIDMaestroを使用するゲームパッド機能を含み、開発用ドライバ証明書の確認が表示されます。Formal Stable版ではありません。</p><div class="actions"><a class="button primary" href="https://dl.irodoli.com/">Beta版をダウンロード</a><a class="button secondary" href="../">irodoli製品一覧</a></div></div>
+      <div class="wrap callout product-final-cta"><span class="eyebrow">Beta 0.8.6</span><h2 style="margin-top:12px">余っている端末を、Windowsの新しい画面へ。</h2><p class="muted">現在はBeta / 確認版です。HIDMaestroを使用するゲームパッド機能を含み、開発用ドライバ証明書の確認が表示されます。Formal Stable版ではありません。</p><div class="actions"><a class="button primary" href="https://dl.irodoli.com/">Beta版をダウンロード</a><a class="button secondary" href="../">irodoli製品一覧</a></div></div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-inner"><span>RollScreen by irodoli</span><span>Beta 0.8.5</span></div></footer>
+  <footer class="footer"><div class="wrap footer-inner"><span>RollScreen by irodoli</span><span>Beta 0.8.6</span></div></footer>
 </body>
 </html>
